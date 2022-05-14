@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 .App {
-  text-align: center;
+  font-family: 'Montserrat';
 }
 
 .App-logo {

@@ -1,6 +1,7 @@
 import "./login.css";
 import React, { useEffect, useState } from "react";
-import hackathon from "../../common/images-svg/hackathon-img.jpg";
+import hackathon_img from "../../common/images-svg/hackathon-img.jpg";
+import Hackathon from "../main/Hackathon";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
@@ -11,7 +12,6 @@ const Login = () => {
 
     setUser(userName);
     localStorage.setItem("user", userName.toString());
-    console.log(userName);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Login = () => {
   }, []);
 
   if (user) {
-    return <div>{user} is logged in</div>;
+    return <Hackathon user={user} />;
   }
 
   return (
@@ -30,8 +30,8 @@ const Login = () => {
       <div className="split-right right">
         <div className="centered">
           <h2 className="heading">HACK IDEAS</h2>
-          <p> Check out the upcoming hackathon events here!!</p>
-          <img src={hackathon} alt="hackathon" />
+          <p className="para"> Check out the upcoming hackathon events here!!</p>
+          <img src={hackathon_img} alt="hackathon" />
         </div>
       </div>
 
@@ -41,7 +41,6 @@ const Login = () => {
             <h1 className="signin-h1">Sign In</h1>
             <form onSubmit={onSubmitHandler}>
               <div className="form-item">
-                <label for="username"></label>
                 <input
                   type="username"
                   name="username"
@@ -57,26 +56,10 @@ const Login = () => {
                   className="button"
                   title="Sign In"
                   value="Sign In"
-                  
                 ></input>
               </div>
             </form>
           </div>
-
-          {/* <div>
-            <input
-              type="text"
-              value={userName}
-              placeholder="Enter Employee ID"
-              onChange={(e) => setUserName(e.target.value)}
-            />
-          </div>
-
-          <div>
-            <button variant="contained" onClick={onSubmitHandler} type="submit">
-              Login
-            </button>
-          </div> */}
         </div>
       </div>
     </>
