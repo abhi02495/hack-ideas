@@ -10,8 +10,8 @@ const Login = () => {
   const onSubmitHandler = async (event) => {
     event.preventDefault();
 
-    setUser(userName);
-    localStorage.setItem("user", userName.toString());
+    setUser(userName.toLowerCase());
+    localStorage.setItem("user", userName.toString().toLowerCase());
   };
 
   useEffect(() => {
@@ -54,8 +54,6 @@ const Login = () => {
                 <input
                   type="submit"
                   className="button"
-                  title="Sign In"
-                  value="Sign In"
                 ></input>
               </div>
             </form>

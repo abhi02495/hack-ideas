@@ -31,6 +31,7 @@ const CreateEvent = (props) => {
       startTime,
       endTime,
       upVotesBy: [],
+      downVotesBy: []
     };
 
     try {
@@ -38,6 +39,7 @@ const CreateEvent = (props) => {
     } catch (err) {}
     setEventAdded(true);
     props.eventAdded(eventAdded);
+
   };
 
   return (
@@ -57,7 +59,7 @@ const CreateEvent = (props) => {
               type="text"
               placeholder="Organizer"
               required
-              onChange={(event) => setOrganizer(event.target.value)}
+              onChange={(event) => setOrganizer(event.target.value.toLowerCase())}
             />
           </div>
           <div>
@@ -70,16 +72,10 @@ const CreateEvent = (props) => {
           </div>
           <div>
             <select name="category" id="category" placeholder="Category" onChange={(event) => setCategory(event.target.value)} required>
-              <option value="" disabled >Select Category</option>
-              <option value="feature" >Feature</option>
-              <option value="tech">Tech</option>
+              <option value="" disabled selected>Select Category</option>
+              <option value="Feature" >Feature</option>
+              <option value="Tech">Tech</option>
             </select>
-            {/* <input
-              type="text"
-              placeholder="Category"
-              required
-              onChange={(event) => setCategory(event.target.value)}
-            /> */}
           </div>
         </div>
         <div className="form2-item">

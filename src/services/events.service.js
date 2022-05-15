@@ -3,17 +3,22 @@ import db from "../util/firebaseConnect.js";
 import {
   collection,
   getDocs,
-//   getDoc,
   addDoc,
-//   updateDoc,
   deleteDoc,
   doc,
+  updateDoc,
+  getDoc,
 } from "firebase/firestore";
 
 const eventCollectionRef = collection(db, "events");
 class EventDataService {
     addEvents = (newEvent) => {
         return addDoc(eventCollectionRef, newEvent);
+    }
+
+    updateEvent = (id, updatedEvent) => {
+        const eventDoc = doc(db, "events", id);
+        return updateDoc(eventDoc, updatedEvent);
     }
 
     deleteEvent = (id) => {
@@ -23,6 +28,11 @@ class EventDataService {
 
     getAllEvent = () => {
         return getDocs(eventCollectionRef);
+    }
+
+    getEvent = (id) => {
+        const eventDoc = doc(db, "events", id);
+        return getDoc(eventDoc);
     }
 }
 

@@ -1,0 +1,17 @@
+.event-item {
+  height: auto;
+  width: 90%;
+  background-color: #fff;
+  display: flex;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-bottom: 2%;
+}
+
+.icon-style {
+    margin-left: 10px;
+    margin-right: 3px;
+    height: 25px;
+    width: 25px
+}
