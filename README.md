@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Getting Started with Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Download the repo and run the below command in the project terminal to install the node modules
+   > npm install
+ 
+2. Start the application using below command to run the application at localhost:3000
+   > npm start
+ 
+3. Sign In with any Employee ID. I have used 'BD5075' as example and click on Submit.
+![image](https://user-images.githubusercontent.com/88732822/168525182-a931806b-08e2-4536-85ac-c47e9c5c5711.png)
 
-## Available Scripts
+4. On the left side of the next screen, we can see a form for creating an Event. Fill in the details
+![image](https://user-images.githubusercontent.com/88732822/168525452-75d1e10b-431b-4f00-b01d-c5423357b5ab.png)
 
-In the project directory, you can run:
+Example form filled - (**Make sure to fill the organizer detail same as the Employee ID so that you get delete privilege of the Event as well**)
+![image](https://user-images.githubusercontent.com/88732822/168525971-5beb81e1-f18e-4359-a9c0-8ea32662c1b2.png)
 
-### `npm start`
+5. Click on Create Event to see the event created in the right hand side of the screen
+![image](https://user-images.githubusercontent.com/88732822/168526245-d8613d96-8560-4b8b-8a31-e068e1e66dae.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6. We can upvote and downvote an Event using the below highlighted buttons
+![image](https://user-images.githubusercontent.com/88732822/168526519-3462b004-8a7a-477c-85e6-b2a117ac954c.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+7. For the events in which you are not the organizer then you will not be able to delete the event (No delete button in the below case)
+![image](https://user-images.githubusercontent.com/88732822/168526719-82da32ae-7d89-4a76-867c-1fd85af7aabe.png)
 
-### `npm test`
+8. Log Out button at the right hand top side of the screen can be used to logout of the application.
+![image](https://user-images.githubusercontent.com/88732822/168527017-f85353ea-d2e2-4946-8af0-3975a124d113.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Running unit test cases
+Use below command to run the tests
+> npm test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
