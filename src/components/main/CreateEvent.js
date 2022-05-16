@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./createEvent.css";
-// import URL from "../../url";
-// import db from "../../util/firebaseConnect.js";
-// import { collection, addDoc, doc, getDocs, getDoc } from "firebase/firestore";
 import EventDataService from "../../services/events.service";
 
 const CreateEvent = (props) => {
@@ -19,7 +16,6 @@ const CreateEvent = (props) => {
 
   const onCreateEvent = async (e) => {
     e.preventDefault();
-
     // const eventRef =
     const event = {
       eventName,

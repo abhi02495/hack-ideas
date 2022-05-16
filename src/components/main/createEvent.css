@@ -34,10 +34,10 @@ span {
 
 .button-panel {
     margin-top: 0.2em;
-    width: 100%;
+    width: 50%;
   }
   
-  .button-panel .button {
+  .button-panel .input {
     background: rgba(1, 43, 81, 0.85);
     border: none;
     color: #fff;

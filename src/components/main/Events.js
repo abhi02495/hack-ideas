@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EventDataService from "../../services/events.service";
 import { Icon } from "@iconify/react";
+import { Redirect, Route } from 'react-router-dom';
 import Hackathon from "./Hackathon";
 
 const Events = ({ item }) => {
@@ -77,7 +78,7 @@ const Events = ({ item }) => {
 
   return (
       <>
-    {isDeleted ? <Hackathon /> :
+    {isDeleted ? <Hackathon user={localStorage.getItem('user')}/> :
     <div
       style={{
         padding: 20,
@@ -139,7 +140,7 @@ const Events = ({ item }) => {
         )}
       </span>
       {user === item.organizer.toLowerCase() ? <div style={{paddingTop: 20}}>
-          <button onClick={deleteEvent}>Delete</button>
+          <button style={{borderColor: "red", borderRadius: 10}} onClick={deleteEvent}>Delete</button>
       </div>: ""}
       
     </div>

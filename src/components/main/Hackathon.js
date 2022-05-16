@@ -6,7 +6,7 @@ import ListEvents from "./ListEvents";
 import Login from "../login/Login";
 import cry from "../../common/images-svg/cry.png";
 
-const Hackathon = () => {
+const Hackathon = (props) => {
   const [events, setEvents] = useState([]);
   const [isEventAdded, setIsEventAdded] = useState();
   const [isLoggedOut, setLoggedOut] = useState(false);
@@ -47,7 +47,7 @@ const Hackathon = () => {
         <div className="event-div">
           <h5>
             {" "}
-            Hi <strong>{localStorage.getItem('user').toUpperCase()}</strong>, Create your own
+            Hi <strong>{props.user.toUpperCase()}</strong>, Create your own
             Event here!!
           </h5>
 
@@ -56,14 +56,14 @@ const Hackathon = () => {
       </div>
       <div className="split-right-createEvent right">
         <div className="listEvent-space">
-          <button className="logoutBtn" onClick={onLogOutHandler}>
+          <button className="logoutBtn" onClick={onLogOutHandler} data-testid ="logoutButton">
             {" "}
             Log Out{" "}
           </button>
         </div>
         {events.length === 0 ? setInterval(()=>{
           <div>
-            <div className="no-events">
+            <div className="no-events" >
               <h3> Sorry, No Upcoming Events!!</h3>
             </div>{" "}
             <div className="no-events">
