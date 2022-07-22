@@ -32,6 +32,9 @@ Example form filled - (**Make sure to fill the organizer detail same as the Empl
 Use below command to run the tests
 > npm test
 
+This project needs to be updated more.
+Will be using the Login Signup APIs and also a backend to store the events.
+
 
 
 
